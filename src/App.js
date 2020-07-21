@@ -1,24 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// Dependencies
+import React, { useState, useEffect } from 'react';
 
-function App() {
+// Views
+import HomeView from './components/Views/HomeView';
+import ProductView from './components/Views/ProductView';
+
+// Types
+import { Pages } from './Types/Types';
+
+const App = () => {
+  const [currentPage, setCurrentPage] = useState(Pages.Home);
+  const [currentProduct, setCurrentProduct] = useState({ name: '', price: '', description: '' });
+
+  const changeCurrentPage = page => setCurrentPage(page);
+  
+  const changeCurrentProduct = product => setCurrentProduct(product);
+  
+  const renderPage = () => {
+    switch (currentPage) {
+      case Pages.Home:
+        return (
+          <HomeView
+            product={currentProduct}
+            changeProduct={changeCurrentProduct}
+            changePage={changeCurrentPage}
+          />
+        );
+      case Pages.ProductDetails:
+        return (
+          <ProductView
+            product={currentProduct}
+            changePage={changeCurrentPage}
+          />
+        );
+      default:
+        break;
+    }
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="app">
+      {renderPage()}
     </div>
   );
 }
