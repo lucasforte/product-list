@@ -2,6 +2,10 @@
 
 This app is just a simple interface that allows the user to search through items and, when clicking on them, see more details about it.
 
+## Preview
+
+You can access the running build *[Here](https://lucasforte.github.io/product-list/)*
+
 ## How to run
 
 Navigate to the project directory and run:
