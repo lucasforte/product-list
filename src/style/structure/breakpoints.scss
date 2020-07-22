@@ -1,0 +1,29 @@
+//Media query
+//bk used are from Chrome. Default 320px, consider bp0
+$breakpoints: (
+  'bp1'  : 375px,
+  'bp2'  : 425px,
+  'bp3'  : 768px,
+  'bp4'  : 1024px,
+  'bp5'  : 1440px,
+  'bp6'  : 2560px
+);
+
+@mixin respond-to($breakpoint) {
+  // Retrieves the value from the key
+  $value: map-get($breakpoints, $breakpoint);
+
+  // If the key exists in the map
+  @if $value != null {
+    // Prints a media query based on the value
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}

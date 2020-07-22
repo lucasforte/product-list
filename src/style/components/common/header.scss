@@ -1,0 +1,23 @@
+#header {
+  background-image: url('../../../assets/imgs/header.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 15rem;
+  @include respond-to(bp3) {
+    height: 25rem;
+  }
+  @include respond-to(bp4) {
+    height: 35rem;
+  }
+  @include respond-to(bp5) {
+    height: 45rem;
+  }
+  h1 {
+    background-color: black;
+    color: white;
+    padding: .5rem;
+    box-shadow: 2px 2px 3px #fff;
+    border-radius: 1.5rem;
+  }
+}

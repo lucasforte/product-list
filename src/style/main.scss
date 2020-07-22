@@ -1,0 +1,22 @@
+@import './structure/grid.scss';
+
+// width
+::-webkit-scrollbar { width: 12px; }
+// Track
+::-webkit-scrollbar-track { background: #f1f1f1; }
+// Handle
+::-webkit-scrollbar-thumb { background: #000; transition: all .3s ease; }
+::-webkit-scrollbar-thumb:hover { background: goldenrod; }
+
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+ul { list-style: none; margin: 0; padding: 0;}
+p, li, button { font-family: 'Oswald', sans-serif; }
+h1, h2, small { font-family: 'Indie Flower', cursive; }
+strong { font-weight: bold; }
+
+.oswald { font-family: 'Oswald', sans-serif; }
+.indie { font-family: 'Indie Flower', cursive; }
+
+@import './components/common/header.scss';
+@import './components/common/footer.scss';

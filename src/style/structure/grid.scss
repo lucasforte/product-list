@@ -1,0 +1,89 @@
+@import './breakpoints.scss';
+
+.wrapper-1-1, .wrapper-1-2, .wrapper-1-3, .wrapper-1-4 {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@include respond-to(bp3) {
+  .wrapper-1-2, .wrapper-1-3, .wrapper-1-4 {
+    width: 50%;
+  }
+}
+
+@include respond-to(bp4) {
+  .wrapper-1-3 {
+    width: calc(100%/3);
+  }
+  .wrapper-1-4 {
+    width: calc(100%/4);
+  }
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  .xa-start {
+    justify-content: flex-start;
+  }
+  .xa-center {
+    justify-content: center;
+  }
+  .xa-end {
+    justify-content: flex-end;
+  }
+  .ya-start {
+    align-items: flex-start;
+  }
+  .ya-center {
+    align-items: center;
+  }
+  .ya-end {
+    align-items: flex-end;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  .xa-start {
+    align-items: flex-start;
+  }
+  .xa-center {
+    align-items: center;
+  }
+  .xa-end {
+    align-items: flex-end;
+  }
+  .ya-start {
+    justify-content: flex-start;
+  }
+  .ya-center {
+    justify-content: center;
+  }
+  .ya-end {
+    justify-content: flex-end;
+  }
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.start {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.end {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.evenly {
+  justify-content: space-evenly;
+}
+.around {
+  justify-content: space-around;
+}
+.between {
+  justify-content: space-between;
+}

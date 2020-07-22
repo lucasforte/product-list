@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 
 // Components
-import Footer from './../common/Footer';
 import SearchBar from './../common/SearchBar';
 import ProductPreview from './../common/ProductPreview';
 
@@ -30,7 +29,7 @@ const HomeView = (props) => {
     const productsList = filteredProducts;
 
     return(
-      <ul>
+      <ul className="wrapper-1-1 row center">
         {productsList.map((product, index) => {
           return(
             <ProductPreview key={index} getProductDetail={getProductDetail} product={product}/>
@@ -44,7 +43,6 @@ const HomeView = (props) => {
     <div id="home-view">
       <SearchBar search={onSearchChange}/>
       {renderProducts()}
-      <Footer/>
     </div>
   );
 }

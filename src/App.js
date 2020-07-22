@@ -1,12 +1,16 @@
 // Dependencies
 import React, { useState, useEffect } from 'react';
 
+// Style
+import './style/main.scss';
+
 // Views
 import HomeView from './components/Views/HomeView';
 import ProductView from './components/Views/ProductView';
 
 // Components
 import Header from './components/common/Header';
+import Footer from './components/common/Footer';
 
 // Types
 import { Pages } from './Types/Types';
@@ -42,9 +46,10 @@ const App = () => {
   }
   
   return (
-    <div id="app">
+    <div id="app" className="wrapper-1-1 column center">
       <Header/>
       {renderPage()}
+      <Footer/>
     </div>
   );
 }
