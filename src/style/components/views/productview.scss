@@ -1,0 +1,27 @@
+#product-view {
+  .container {
+    margin: 2rem 0;
+    figure {
+      width: 90%;
+      max-width: 35rem;
+      margin: 0;
+      img {
+        width: 100%;
+      }
+    }
+    .product-details {
+      margin: 1.5rem 0;
+      p {
+        letter-spacing: .05rem;
+        font-size: 1.2rem;
+        margin: .2rem;
+        text-align: center;
+        &.indie {
+          font-size: 1.5rem;
+          letter-spacing: .02rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}

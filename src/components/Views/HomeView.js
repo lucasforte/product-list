@@ -40,7 +40,7 @@ const HomeView = (props) => {
   }
 
   return(
-    <div id="home-view">
+    <div id="home-view" className="wrapper-1-1">
       <SearchBar search={onSearchChange}/>
       {renderProducts()}
     </div>

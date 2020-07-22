@@ -5,6 +5,11 @@
       color: #fff;
       margin: 0;
       padding: .5rem;
+      &.indie {
+        @include respond-to(bp3) {
+          font-size: 1.5rem;
+        }
+      }
     }
   }
 }

@@ -18,6 +18,29 @@ strong { font-weight: bold; }
 .oswald { font-family: 'Oswald', sans-serif; }
 .indie { font-family: 'Indie Flower', cursive; }
 
+.btn {
+  background: none;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  padding: 0.2rem 1.5rem;
+  border-radius: .3rem;
+  box-shadow: 1px 1px 3px transparent;
+  transition: all .3s ease;
+  &.green {
+    background-color: rgb(93, 248, 100);
+  }
+  &:hover {
+    box-shadow: 1px 1px 3px #777;
+  }
+}
+
 @import './components/common/header.scss';
 @import './components/common/footer.scss';
 @import './components/common/searchbar.scss';
+@import './components/common/productpreview.scss';
+
+@import './components/views/homeview.scss';
+@import './components/views/productview.scss'; 

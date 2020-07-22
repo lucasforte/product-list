@@ -1,0 +1,19 @@
+#product-preview {
+  .container {
+    width: 85%;
+    border: 1px solid #666;
+    margin: 1rem 0;
+    border-radius: 0 0 1rem 1rem;
+    figure {
+      width: 100%;
+      margin: 0;
+      img {
+        width: 100%;
+      } 
+    }
+    p {
+      letter-spacing: .02rem;
+      margin: .2rem;
+    }
+  }
+}
