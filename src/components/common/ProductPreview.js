@@ -1,9 +1,9 @@
 // Dependencies
 import React from 'react';
 
-const ProductPreview = () => {
+const ProductPreview = (props) => {
   return(
-    <div></div>
+    <li onClick={() => props.getProductDetail(props.product)} >{props.product.name}</li>
   );
 }
 

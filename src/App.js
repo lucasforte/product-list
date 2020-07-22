@@ -19,7 +19,7 @@ const App = () => {
   const renderPage = () => {
     switch (currentPage) {
       case Pages.Home:
-        return (
+        return(
           <HomeView
             product={currentProduct}
             changeProduct={changeCurrentProduct}
