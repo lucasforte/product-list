@@ -8,6 +8,7 @@ import { Pages } from '../../Types/Types';
 const ProductView = (props) => {
   return(
     <div id="product-view">
+      <img src={props.product.img} alt={props.product.name} style={{maxWidth: '100px'}}/>
       <p>{props.product.name}</p>
       <p>{props.product.price}</p>
       <p>{props.product.description}</p>

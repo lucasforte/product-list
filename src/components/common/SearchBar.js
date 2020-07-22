@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
   return(
     <div>
-      <input type="text" name="" id="" placeholder="Search Product"/>
+      <input type="search" name="" id="" placeholder="Search Product" onChange={props.search}/>
     </div>
   );
 }

@@ -1,8 +1,7 @@
 // Dependencies
-import React from 'react';
+import React, { useState } from 'react';
 
 // Components
-import Header from './../common/Header';
 import Footer from './../common/Footer';
 import SearchBar from './../common/SearchBar';
 import ProductPreview from './../common/ProductPreview';
@@ -14,13 +13,21 @@ import { Pages } from '../../Types/Types';
 import { products } from '../../api/api';
  
 const HomeView = (props) => {
-  const getProductDetail = (product) => {
-    props.changeProduct(product)
-    props.changePage(Pages.ProductDetails)
+  const [searchField, setSearchField] = useState('')
+
+  const filteredProducts = products.filter(product =>{
+    return product.name.toLowerCase().includes(searchField.toLowerCase());
+  })
+
+  const onSearchChange = event => setSearchField(event.target.value);
+
+  const getProductDetail = product => {
+    props.changeProduct(product);
+    props.changePage(Pages.ProductDetails);
   }
 
   const renderProducts = () => {
-    const productsList = products;
+    const productsList = filteredProducts;
 
     return(
       <ul>
@@ -35,8 +42,7 @@ const HomeView = (props) => {
 
   return(
     <div id="home-view">
-      <Header/>
-      <SearchBar/>
+      <SearchBar search={onSearchChange}/>
       {renderProducts()}
       <Footer/>
     </div>

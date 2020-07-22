@@ -5,12 +5,15 @@ import React, { useState, useEffect } from 'react';
 import HomeView from './components/Views/HomeView';
 import ProductView from './components/Views/ProductView';
 
+// Components
+import Header from './components/common/Header';
+
 // Types
 import { Pages } from './Types/Types';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState(Pages.Home);
-  const [currentProduct, setCurrentProduct] = useState({ name: '', price: '', description: '' });
+  const [currentProduct, setCurrentProduct] = useState({ name: '', price: '', img: '', description: '' });
 
   const changeCurrentPage = page => setCurrentPage(page);
   
@@ -40,6 +43,7 @@ const App = () => {
   
   return (
     <div id="app">
+      <Header/>
       {renderPage()}
     </div>
   );
